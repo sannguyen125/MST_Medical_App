@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.doctor.SidebarDoctorController"
+      prefWidth="250"
+      spacing="150"
+      style="-fx-border-color: #BBBBBB; -fx-border-radius: 5; -fx-border-width: 2;"
+      stylesheets="@../../../../styles/sidebar.css">
+
+    <!-- Logo -->
+    <ImageView fitHeight="60" fitWidth="60" preserveRatio="true">
+        <image>
+            <Image url="@../../../../images/medical_icon.png" />
+        </image>
+        <VBox.margin>
+            <Insets left="20" />
+        </VBox.margin>
+    </ImageView>
+
+    <!-- Menu Items -->
+    <VBox spacing="10">
+
+        <HBox fx:id="overviewItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/overview.png"/></image>
+            </ImageView>
+            <Button fx:id="overviewButton" text="Overview" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+        <HBox fx:id="appointmentItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/appointment_icon.png"/></image>
+            </ImageView>
+            <Button fx:id="appointmentButton" text="Appointments" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+        <HBox fx:id="patientsItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/Patient_Management_Icon.png"/></image>
+            </ImageView>
+            <Button fx:id="patientsButton" text="Patients" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+        <HBox fx:id="chatItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/chat_icon.png"/></image>
+            </ImageView>
+            <Button fx:id="chatButton" text="Chat" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+        <HBox fx:id="settingsItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/settings_icon.png"/></image>
+            </ImageView>
+            <Button fx:id="settingsButton" text="Settings" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+        <HBox fx:id="logoutItem" styleClass="sidebar-item">
+            <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                <image><Image url="@../../../../images/logout_icon.png"/></image>
+            </ImageView>
+            <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: inherit;"/>
+        </HBox>
+
+    </VBox>
+
+    <padding>
+        <Insets top="20"/>
+    </padding>
+
+</VBox>

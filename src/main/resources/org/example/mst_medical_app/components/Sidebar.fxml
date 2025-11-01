@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+        <VBox  xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.mst_medical_app.controller.components.SidebarController"
+              prefHeight="1459.0" prefWidth="250.0" spacing="150.0" style="-fx-border-color: #BBBBBB; -fx-border-radius: 5; -fx-border-width: 2;" >
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/medical_icon.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="20.0" />
+                    </VBox.margin>
+                </ImageView>
+                <VBox prefHeight="200.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/overview.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="overviewButton" mnemonicParsing="false" prefHeight="50.0" style="-fx-border-color: transparent; -fx-border-width: 0;" text="Overview" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/Docter_Management_Icon.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="doctorButton" mnemonicParsing="false" prefHeight="50.0" text="Docter" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/Patient_Management_Icon.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="patientButton" mnemonicParsing="false" prefHeight="50.0" text="Patient" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/appointment_icon.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="appointmentButton" mnemonicParsing="false" prefHeight="50.0" text="Appointments" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/icon-for-report-4.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="reportButton" mnemonicParsing="false" prefHeight="50.0" text="Reports" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/settings_icon.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="settingButton" mnemonicParsing="false" prefHeight="50.0" text="Settings" />
+                            </children>
+                        </HBox>
+                        <HBox minHeight="-Infinity" prefHeight="45.0" spacing="10.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../images/logout_icon.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="logoutButton" onAction="#handleLogout" mnemonicParsing="false" prefHeight="50.0" text="Logout" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </VBox>

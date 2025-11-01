@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.mst_medical_app.features.chat.ChatController"
+            style="-fx-background-color: white;">
+
+    <!-- ===== LEFT: CONVERSATION LIST ===== -->
+    <left>
+        <VBox fx:id="conversationListContainer"
+              prefWidth="320"
+              spacing="8"
+              style="-fx-background-color: #F4F9FF; -fx-border-color: #E1E8F5; -fx-border-width: 0 1 0 0;">
+
+            <!-- Search Bar -->
+            <HBox spacing="8" alignment="CENTER_LEFT" style="-fx-padding: 12;">
+                <TextField fx:id="searchField"
+                           promptText="Search..."
+                           style="-fx-background-radius: 8; -fx-background-color: white;"/>
+            </HBox>
+
+            <!-- Scroll list of conversations -->
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
+                        style="-fx-background-color: transparent;">
+                <VBox fx:id="conversationList" spacing="4" style="-fx-padding: 4 8 12 8;"/>
+            </ScrollPane>
+        </VBox>
+    </left>
+
+    <!-- ===== RIGHT: CHAT WINDOW ===== -->
+    <center>
+        <VBox fx:id="chatWindow"
+              style="-fx-background-color: white;"
+              spacing="10">
+
+            <!-- Header -->
+            <HBox fx:id="chatHeader"
+                  spacing="12"
+                  alignment="CENTER_LEFT"
+                  style="-fx-padding: 12; -fx-background-color: #E8F1FF; -fx-border-color: #D3E3FD; -fx-border-width: 0 0 1 0;">
+
+                <ImageView fx:id="chatAvatar" fitHeight="36" fitWidth="36" preserveRatio="true"
+                           style="-fx-background-radius: 50%; -fx-border-radius: 50%;"/>
+
+                <VBox>
+                    <Label fx:id="chatName" style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+                    <Label fx:id="chatStatus" style="-fx-font-size: 11px; -fx-text-fill: #4B5563;"/>
+                </VBox>
+            </HBox>
+
+            <!-- Messages Area -->
+            <ScrollPane fx:id="messageScrollPane"
+                        fitToWidth="true" vbarPolicy="AS_NEEDED" hbarPolicy="NEVER"
+                        style="-fx-background-color: transparent;"
+                        VBox.vgrow="ALWAYS">
+                <VBox fx:id="messageContainer"
+                      spacing="6"
+                      style="-fx-padding: 12;"/>
+            </ScrollPane>
+
+            <!-- Typing Indicator -->
+            <HBox fx:id="typingIndicator"
+                  spacing="6"
+                  style="-fx-padding: 0 0 6 16; -fx-opacity: 0;"
+                  alignment="CENTER_LEFT">
+                <Label text="Typing" style="-fx-text-fill: #6B7280; -fx-font-size: 11px;"/>
+                <Label fx:id="typingDots" text="•••" style="-fx-text-fill: #0D6EFD; -fx-font-size: 16px;"/>
+            </HBox>
+
+            <!-- Input Box -->
+            <HBox spacing="6" style="-fx-padding: 8 12 14 12;">
+                <TextField fx:id="messageField"
+                           promptText="Type a message..."
+                           HBox.hgrow="ALWAYS"
+                           style="-fx-background-radius: 14;"/>
+                <Button fx:id="sendBtn"
+                        text="Send"
+                        style="-fx-background-color: #0D6EFD; -fx-text-fill: white; -fx-background-radius: 14;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

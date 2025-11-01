@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.doctor.DoctorPatientsController"
+      spacing="12"
+      style="-fx-background-color: #F8FAFC; -fx-padding: 16;">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="👩‍⚕️ My Patients"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search patient..."
+                   prefWidth="250"
+                   style="-fx-background-radius: 10; -fx-border-radius: 10;"/>
+        <ComboBox fx:id="statusFilter" prefWidth="150" promptText="Status"/>
+    </HBox>
+
+    <!-- Table -->
+    <TableView fx:id="patientsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colName" text="Name" prefWidth="160"/>
+            <TableColumn fx:id="colAge" text="Age" prefWidth="80"/>
+            <TableColumn fx:id="colGender" text="Gender" prefWidth="100"/>
+            <TableColumn fx:id="colCondition" text="Condition" prefWidth="180"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="120"/>
+            <TableColumn fx:id="colAction" text="Action" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+</VBox>

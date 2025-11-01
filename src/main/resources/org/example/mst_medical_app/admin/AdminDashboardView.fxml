@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.admin.AdminDashboardController"
+      style="-fx-background-color: linear-gradient(to bottom right, #f0f4f8, #ffffff);" spacing="10">
+   <children>
+      <HBox prefHeight="300.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #E3F2FD; -fx-background-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 3);" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/person_icon.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="patientCountLabel" text="0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1565C0;"/>
+                        <Label text="Patient" style="-fx-text-fill: #1565C0; -fx-font-size: 14px;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #E8F5E9; -fx-background-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 3);" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/perscriptions_icon.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="prescriptionCountLabel" text="0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2E7D32;"/>
+                        <Label text="Perscriptions" style="-fx-text-fill: #2E7D32; -fx-font-size: 14px;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFF3E0; -fx-background-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 3);" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/appointment_icon.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="appointmentCountLabel" text="43" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #EF6C00;" />
+                        <Label text="Appointments" style="-fx-text-fill: #EF6C00; -fx-font-size: 14px;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FCE4EC; -fx-background-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0, 0, 3);" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/revenue_icon.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-width: 5; -fx-border-radius: 5;">
+                     <children>
+                        <Label fx:id="revenueLabel" text="0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #AD1457;" />
+                        <Label text="Revenue" style="-fx-text-fill: #AD1457; -fx-font-size: 14px;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets right="15.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="400.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="900.0" spacing="5.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Patients Over Time" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #333;" />
+                  <LineChart  fx:id="patientLineChart">
+                    <xAxis>
+                      <CategoryAxis label="Month" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Patients" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Patients Distribution" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #333;" />
+                  <PieChart fx:id="patientPieChart" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets right="15.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 15;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="Recent Patiens" style="-fx-font-weight: bold; -fx-font-size: 16; -fx-text-fill: #333;" />
+            <TableView fx:id="recentPatientTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+                  <TableColumn fx:id="ageColumn" text="Age" prefWidth="80"/>
+                  <TableColumn fx:id="genderColumn" text="Gender" prefWidth="100"/>
+                  <TableColumn fx:id="doctorColumn" text="Doctor" prefWidth="200"/>
+                  <TableColumn fx:id="statusColumn" text="Status" prefWidth="150"/>
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets right="15.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>
