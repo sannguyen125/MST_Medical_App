@@ -68,8 +68,8 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.mst_medical_app/org.example.mst_medical_app.login.LoginView
-                            </mainClass>
+                            <!-- Launch the JavaFX Application class (module/class) -->
+                            <mainClass>org.example.mst_medical_app/org.example.mst_medical_app.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

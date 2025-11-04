@@ -1,0 +1,24 @@
+.sidebar-item {
+    -fx-background-color: transparent;
+    -fx-padding: 8 12;
+    -fx-background-radius: 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 10;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #e6f0ff;
+}
+
+.sidebar-item-active {
+    -fx-background-color: #0D6EFD;
+    -fx-background-radius: 8;
+}
+
+.sidebar-item-active Button {
+    -fx-text-fill: white;
+}
+
+.sidebar-item-active ImageView {
+    -fx-opacity: 0.95;
+}

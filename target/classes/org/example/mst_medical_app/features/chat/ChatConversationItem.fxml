@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.features.chat.ChatConversationItemController"
+      alignment="CENTER_LEFT"
+      spacing="10"
+      style="-fx-background-color: transparent; -fx-padding: 8 10;">
+
+    <!-- Avatar -->
+    <ImageView fx:id="avatarImg"
+               fitWidth="42" fitHeight="42"
+               preserveRatio="true"
+               style="-fx-background-radius: 50%; -fx-border-radius: 50%;" />
+
+    <!-- Name + Last Message -->
+    <VBox alignment="CENTER_LEFT" spacing="2" HBox.hgrow="ALWAYS">
+        <Label fx:id="nameLbl" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="lastMsgLbl" style="-fx-font-size: 12px; -fx-text-fill: #6B7280;"/>
+    </VBox>
+
+    <!-- Time -->
+    <Label fx:id="timeLbl"
+           style="-fx-font-size: 11px; -fx-text-fill: #6B7280;" />
+
+</HBox>

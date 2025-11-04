@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<VBox maxWidth="Infinity" maxHeight="Infinity" xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.admin.SettingController"
+      spacing="20" style="-fx-padding: 20;" VBox.vgrow = "ALWAYS">
+
+
+    <Label text="Admin Settings"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <ScrollPane fitToWidth="true" prefHeight="1200">
+        <content>
+            <VBox spacing="20" style="-fx-padding: 10;">
+                <TitledPane text="Quản lý tài khoản người dùng" expanded="true">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+
+                        <Label text="Xem, thêm, sửa hoặc vô hiệu hóa tài khoản."/>
+                        <HBox spacing="10">
+                            <Button text="Danh sách tài khoản" fx:id="btnUserList"/>
+                            <Button text="+ Thêm tài khoản" fx:id="btnAddUser"/>
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+
+                <TitledPane text="Cấu hình hệ thống" expanded="false">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+                        <GridPane hgap="10" vgap="10">
+                            <Label text="Giờ khám bắt đầu:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                            <TextField fx:id="txtStartTime" promptText="08:00" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                            <Label text="Giờ kết thúc:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                            <TextField fx:id="txtEndTime" promptText="17:00" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                            <Label text="Thời lượng mỗi ca khám (phút):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                            <TextField fx:id="txtDuration" promptText="30" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                            <Label text="Giới hạn đặt trước (ngày):" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                            <TextField fx:id="txtLimitDays" promptText="14" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        </GridPane>
+                        <Button text="Lưu cấu hình" fx:id="btnSaveSystem"
+                                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                    </VBox>
+                </TitledPane>
+
+
+                <TitledPane text="Sao lưu va khôi phục" expanded="false">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+                        <Label text="Tạo bản sao lưu hoặc phục hồi dữ liệu hệ thống."/>
+                        <HBox spacing="10">
+                            <Button text="Tạo bản sao lưu" fx:id="btnBackup"
+                                    style="-fx-background-color: #673AB7; -fx-text-fill: white;"/>
+                            <Button text="Phục hồi dữ liệu" fx:id="btnRestore"
+                                    style="-fx-background-color: #9C27B0; -fx-text-fill: white;"/>
+                        </HBox>
+                    </VBox>
+                </TitledPane>
+
+            </VBox>
+        </content>
+    </ScrollPane>
+</VBox>
