@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox prefHeight="70.0" prefWidth="200.0" spacing="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" style="-fx-border-color: #BBBBBB; -fx-border-radius: 5; -fx-border-width: 2;" stylesheets="@../../../../styles/sidebar.css"  fx:controller="org.example.mst_medical_app.controller.components.HeaderController">
+    <children>
+      <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-border-color: #BBBBBB; -fx-border-radius: 5; -fx-border-width: 2;" stylesheets="@../../../../styles/sidebar.css" >
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/medical_icon.png" />
+               </image>
+            </ImageView>
+            <Label text="MST" />
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="165.0" HBox.hgrow="ALWAYS">
+         <children>
+              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../../../../images/default_avatar.png" />
+                  </image>
+              </ImageView>
+              <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Admin">
+        </Label>
+         </children>
+      </HBox>
+    </children>
+   <padding>
+      <Insets right="10.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.admin.AppointmentCalendarController"
+      spacing="12" style="-fx-padding: 16;">
+
+
+    <!-- Top Toolbar -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Appointments" style="-fx-font-size:20; -fx-font-weight:bold;"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <Button fx:id="prevBtn" text="◀"/>
+
+        <Label fx:id="monthLabel"
+               style="-fx-font-size:16; -fx-font-weight:bold; -fx-text-fill:#1f2937;"/>
+
+        <Button fx:id="nextBtn" text="▶"/>
+
+        <!-- Toggle Buttons (ToggleGroup will be assigned in Controller) -->
+        <ToggleButton fx:id="dayBtn" text="Day"/>
+        <ToggleButton fx:id="weekBtn" text="Week"/>
+        <ToggleButton fx:id="monthBtn" text="Month" selected="true"/>
+    </HBox>
+
+
+    <!-- Legend -->
+    <HBox spacing="14">
+        <HBox spacing="4" alignment="CENTER_LEFT">
+            <Label text="●" style="-fx-text-fill:#EF4444; -fx-font-size:14;"/>
+            <Label text="Emergency"/>
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER_LEFT">
+            <Label text="●" style="-fx-text-fill:#3B82F6; -fx-font-size:14;"/>
+            <Label text="Examination"/>
+        </HBox>
+
+        <HBox spacing="4" alignment="CENTER_LEFT">
+            <Label text="●" style="-fx-text-fill:#8B5CF6; -fx-font-size:14;"/>
+            <Label text="Follow-up"/>
+        </HBox>
+    </HBox>
+
+
+    <!-- Calendar Container -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background-color:transparent;" hbarPolicy="NEVER">
+        <GridPane fx:id="calendarGrid" hgap="8" vgap="8"
+                  style="-fx-background-color:transparent;">
+            <padding>
+                <Insets top="4" right="2" bottom="8" left="2"/>
+            </padding>
+        </GridPane>
+    </ScrollPane>
+
+</VBox>

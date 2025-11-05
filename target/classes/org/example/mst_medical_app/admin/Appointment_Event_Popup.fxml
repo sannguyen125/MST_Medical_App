@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.mst_medical_app.controller.admin.AppointmentEventPopupController"
+      spacing="10" style="-fx-padding: 18; -fx-background-color:white;">
+    <Label text="Appointment Detail" style="-fx-font-size:18; -fx-font-weight:bold;"/>
+    <Label fx:id="titleLbl"/>
+    <Label fx:id="doctorLbl"/>
+    <Label fx:id="patientLbl"/>
+    <Label fx:id="datetimeLbl"/>
+    <Label fx:id="statusLbl"/>
+
+    <Separator/>
+
+    <HBox spacing="8">
+        <Button text="Close" onAction="#close"/>
+        <!-- Nút Edit/Cancel sẽ làm ở bước logic -->
+    </HBox>
+</VBox>
