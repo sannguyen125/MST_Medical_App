@@ -25,11 +25,14 @@ D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\core\uti
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\core\utils\UserSession.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\features\chat\ChatController.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\features\chat\ChatConversationItemController.java
+D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\features\chat\ChatDAO.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\features\settings\SettingController.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\Main.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\Admin.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\Appointment.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\AppointmentRepository.java
+D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\chat\Conversation.java
+D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\chat\Message.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\Doctor.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\Patient.java
 D:\San\java\x\MST_Medical_App\src\main\java\org\example\mst_medical_app\model\UserModel.java

@@ -9,6 +9,7 @@ org\example\mst_medical_app\model\Appointment$Status.class
 org\example\mst_medical_app\controller\admin\PatientsController.class
 org\example\mst_medical_app\controller\doctor\DoctorDashboardController.class
 org\example\mst_medical_app\controller\admin\AppointmentsController$Appointment.class
+org\example\mst_medical_app\model\chat\Conversation.class
 org\example\mst_medical_app\controller\doctor\DoctorPatientsController.class
 org\example\mst_medical_app\controller\LoginController.class
 org\example\mst_medical_app\controller\admin\AppointmentCalendarController.class
@@ -17,12 +18,14 @@ org\example\mst_medical_app\controller\admin\SidebarAdminController.class
 org\example\mst_medical_app\controller\components\SidebarController.class
 org\example\mst_medical_app\controller\doctor\DoctorPatientsController$1.class
 org\example\mst_medical_app\controller\admin\DoctorsController.class
+org\example\mst_medical_app\features\chat\ChatDAO.class
 org\example\mst_medical_app\controller\patient\DoctorsController.class
 org\example\mst_medical_app\controller\admin\AdminDashboardController$Patient.class
 org\example\mst_medical_app\controller\admin\AppointmentEventPopupController.class
 org\example\mst_medical_app\core\security\AuthManager.class
 org\example\mst_medical_app\model\UserRepository.class
 org\example\mst_medical_app\controller\MainLayoutController.class
+org\example\mst_medical_app\model\chat\Message.class
 org\example\mst_medical_app\features\chat\ChatConversationItemController.class
 module-info.class
 org\example\mst_medical_app\model\AppointmentRepository.class
